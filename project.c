@@ -16,12 +16,12 @@ int main ()
 	char choice;
 	int points = 50;
 	int money = 50;
-	for (int i = 1; i < 5; i++){
+	for (int i = 1; i < 6; i++){
 		system("cls");
 		start ();
 		system("cls");
-		printf ("\t\t\t\t[[[QUEST ADVENTURES]]]\n\n");
-		printf ("\t\t DAY %d\t\t\t HEALTH: %d\t\t\t\tMONEY: %d", i, points, money);
+		printf ("\t\t\t\t\033[1;32m[[[QUEST ADVENTURES]]]\033[0m\n\n");
+		printf ("\t\t DAY %d\t\t\t HEALTH: \033[0;31m%d\033[0m\t\t\t\tMONEY: \033[1;32m$%d\033[0m", i, points, money);
 		printf ("\n");
 		printf("\033[1;33m  \\__/ \033[0m                       @@@@@@@            @@@@@@\n");
 		printf("\033[1;33m__/  \\__ \033[0m                    @@@@@@@@@@         @@@@@@@@\n");
@@ -48,16 +48,20 @@ int main ()
 		{
 			case 'a':
 			case 'A':{
-				shop (points = 50, money = 50);
+				shop (points, money);
+				getchar ();
 				break;
 			}
 			case 'b':
 			case 'B':{
-				home (points = 50);
+				home (points);
+				getchar ();
 				break;
 			}
 		}
-		printf ("\t\t\t\tDAY %d ENDS!\n\n");
+		system ("cls");
+		printf ("\t\t\t\tDAY %d ENDS!\n\n", i);
+		getchar ();
 	}
 	return 0;
 }
