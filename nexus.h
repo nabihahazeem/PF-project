@@ -320,6 +320,6 @@ int home (int points)
 		printf ("You're such a boring person. (-_-)\n");
 		printf ("You have &d points.\n", points);
 	}
-	return 0;
+	return points;
 }
 #endif // NEXUS_H_INCLUDED
