@@ -16,9 +16,8 @@ int main ()
 	char choice;
 	int points = 50;
 	int money = 50;
+	start ();
 	for (int i = 1; i < 6; i++){
-		system("cls");
-		start ();
 		system("cls");
 		printf ("\t\t\t\t\033[1;32m[[[QUEST ADVENTURES]]]\033[0m\n\n");
 		printf ("\t\t DAY %d\t\t\t HEALTH: \033[0;31m%d\033[0m\t\t\t\tMONEY: \033[1;32m$%d\033[0m", i, points, money);
