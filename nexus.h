@@ -73,15 +73,15 @@ int shop (int points, int money)
 			points -= 10;
 		}
 		printf ("\tThank you and Come again!\n");
-		printf ("You have $%d left.\n", money);
-		printf ("You have %d points.\n", points);
-		return points;
+		printf ("\tYou have $%d left.\n", money);
+		printf ("\tYou have %d points.\n", points);
+		getchar ();
 	}
 	if (c1 == 'b' || c1 == 'B'){
 		printf ("\tI see....You can come back whenever you want to. :) \n");
 	}
-		
-	printf ("\tThank you and Come again!\n");
+	
+
 	return points;
 }
 
@@ -235,7 +235,7 @@ int picnic (int points)
 	printf ("\tWe're here!\n");
 	printf ("\n");
 	printf("\033[1;32m    ^^^^       \033[0;36m_______________\033[0m  \033[1;32m^^^\033[0m\n");
-	printf("\033[1;32m              \033[0;36m/ \033[0;92m(QQQ)\033[0m       \033[0;36m  /\033[0m\n");
+	printf("\033[1;32m              \033[0;36m/ \033[0;92m(QQQ)\033[0m      \033[0;36m  /\033[0m\n");
 	printf("\033[1;32m      ^^^^^  \033[0;36m/      U       /\033[0m  \033[1;32m^^\033[0m\n");
   printf("\033[1;32m            \033[0;36m/   U   \033[1;33m(YYYY)\033[0;36m /\033[0m\n");
   printf("\033[1;32m^^^^^^^^^^^\033[0;36m/______________/\033[0m\033[1;32m^^^^^^^^^^\033[0m\n");
@@ -243,6 +243,7 @@ int picnic (int points)
   printf ("Clean up the place before you leave, ok?\n");
   printf ("A. Clean Up.\n");
   printf ("B. Nah.\n");
+  printf ("Enter your choice: ");
   scanf (" %c", &c7);
   if (c7 == 'a' || c7 == 'A'){
   	points += 10;
@@ -250,7 +251,9 @@ int picnic (int points)
 	if (c7 == 'b' || c7 == 'B'){
 		points -= 10;
 	}
-	printf ("You have &d points.\n", points);
+	printf ("You have %d points.\n", points);
+	getchar ();
+
 	return points;
 }
 
@@ -318,8 +321,9 @@ int home (int points)
 	}
 	if (c5 == 'b' || c5 == 'B'){
 		printf ("You're such a boring person. (-_-)\n");
-		printf ("You have &d points.\n", points);
+		printf ("You have %d points.\n", points);
 	}
+	getchar ();
 	return points;
 }
 #endif // NEXUS_H_INCLUDED
